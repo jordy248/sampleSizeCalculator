@@ -72,8 +72,15 @@ shinyServer(
                                                          power = input$beta/100, 
                                                          alternative = "two.sided", 
                                                          sig.level = ((100-input$alpha)/100)),0
-                        )
+                               )
                         vol * 2
+                })
+                
+                output$minimum_detectable_conversion_rates ({
+                        lo <- input$cvr * (1 - input$mde)
+                        hi <- input$cvr * (1 + input$mde)
+                        
+                        paste(lo, "% to", hi, "%")
                 })
                 
 ##                output$cows <- renderText ({
