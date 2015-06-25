@@ -10,8 +10,6 @@ source("calcSampleSize.R")
 shinyServer(
         function(input, output) {
                 
-
-                
                 output$sample_size_per_variation <- renderText ({ 
                         
                         vol <- round(new.power.prop.test(p1 = input$cvr, 
@@ -20,7 +18,6 @@ shinyServer(
                                                    alternative = "two.sided", 
                                                    sig.level = ((100-input$alpha)/100)),0
                         )
-
                         vol
                 })
                 
@@ -31,9 +28,7 @@ shinyServer(
                                                          alternative = "two.sided", 
                                                          sig.level = ((100-input$alpha)/100)),0
                         )
-                        
                         vol * 2
-                        
                 })
                 
 ##                output$cows <- renderText ({
