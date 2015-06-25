@@ -28,7 +28,8 @@ shinyUI(fluidPage(
                 ),
                 
                 mainPanel(
-                        p("Sample size required per variation: "
+                        p("Sample size required per variation: ", style="font-weight:bold;
+                          font-size:2em;"
                         ),
                                 h1(strong(textOutput("sample_size_per_variation"), style="color:blue;")
                                 ),
@@ -36,7 +37,8 @@ shinyUI(fluidPage(
                         ),
                         br(
                         ),
-                        p("TOTAL SAMPLE SIZE REQUIRED: ",style="font-weight:bold; font-size:2em;"
+                        p("TOTAL SAMPLE SIZE REQUIRED: ",style="font-weight:bold; font-size:2em;
+                          background:yellow;"
                         ),
                                 h1(strong(textOutput("sample_size_total"), style="color:blue;")
                                 ),
@@ -45,8 +47,12 @@ shinyUI(fluidPage(
                         ),
                         br(
                         ),
-                        p("The test conversion rates distinguishable from the control are external to this range: "),
-                                h1(strong(textOutput("min_det_eff")), style="color:blue;")
+                        p("The test conversion rates distinguishable from 
+                          the control are external to this range (inclusive): ", 
+                          style="font-weight:bold; font-size:2em;"
+                        ),
+                                h1(strong(textOutput("min_det_eff")), style="color:blue;"
+                                )
 
 ##                        textOutput("cows")
                 )
