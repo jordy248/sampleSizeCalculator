@@ -76,13 +76,15 @@ shinyServer(
                         vol * 2
                 })
                 
-                output$minimum_detectable_conversion_rates ({
-                        lo <- input$cvr * (1 - input$mde)
-                        hi <- input$cvr * (1 + input$mde)
+                output$min_det_eff <- renderText ({
+                        low <- ((input$cvr * 100) * (1 - (input$mde/100)))
+                        high <- ((input$cvr * 100) * (1 + (input$mde/100)))
                         
-                        paste(lo, "% to", hi, "%")
+                        paste(low, "% to ", high, "%")
+                        
                 })
                 
+
 ##                output$cows <- renderText ({
 ##                        vol <- round(new.power.prop.test(p1 = input$cvr, 
 ##                                                         p2 = (input$cvr * (1 + (input$mde/100))), 
