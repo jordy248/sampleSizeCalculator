@@ -6,10 +6,10 @@ shinyUI(fluidPage(
         sidebarLayout(
                 sidebarPanel(
                         helpText("Use the proper sample size for your A/B test
-                                 and you just might find yourself as happy
+                                 and you just might find yourself as rad
                                  as this cow:"
                         ),
-                        img(src="http://i.imgur.com/nsFUwJ1.gif", style=
+                        img(src="http://media.giphy.com/media/h55EUEsTG9224/giphy.gif", style=
                                     "width:75%; height:75%; align:center;"
                         ),
                         numericInput("cvr", label = h3("Enter the current 
