@@ -40,9 +40,14 @@ shinyUI(fluidPage(
                         ),
                                 h1(strong(textOutput("sample_size_total"), style="color:blue;")
                                 ),
-                        p("Minimum detectable conversion rates: "),
-                                (h1(strong(textOutput("minimum_detectable_conversion_rates"))))
                         
+                        br(
+                        ),
+                        br(
+                        ),
+                        p("The test conversion rates distinguishable from the control are external to this range: "),
+                                h1(strong(textOutput("min_det_eff")), style="color:blue;")
+
 ##                        textOutput("cows")
                 )
         )
