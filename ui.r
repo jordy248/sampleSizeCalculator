@@ -19,10 +19,10 @@ shinyUI(fluidPage(
                         sliderInput("mde", label = h3("Select the desired minimum detectable effect:"),
                                 min = 0, max = 100, value = 10
                         ),
-                        sliderInput("alpha", label = h3("Enter the desired confidence interval:"),
+                        sliderInput("alpha", label = h3("Select the desired confidence interval:"),
                                     min = 50, max = 100, value = 95
                         ),
-                        sliderInput("beta", label = h3("Enter the desired statistical power:"),
+                        sliderInput("beta", label = h3("Select the desired statistical power:"),
                                     min = 50, max = 100, value = 80
                         )
                 ),
@@ -39,7 +39,9 @@ shinyUI(fluidPage(
                         p("TOTAL SAMPLE SIZE REQUIRED: ",style="font-weight:bold; font-size:2em;"
                         ),
                                 h1(strong(textOutput("sample_size_total"), style="color:blue;")
-                                )                        
+                                ),
+                        p("Minimum detectable conversion rates: "),
+                                (h1(strong(textOutput("minimum_detectable_conversion_rates"))))
                         
 ##                        textOutput("cows")
                 )
