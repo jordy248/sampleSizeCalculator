@@ -6,7 +6,7 @@ shinyUI(fluidPage(
         sidebarLayout(
                 sidebarPanel(
                         helpText("Use the proper sample size for your A/B test
-                                 and you just might find yourself as rad
+                                 and you just might find yourself as fierce
                                  as this cow:"
                         ),
                         img(src="http://media.giphy.com/media/h55EUEsTG9224/giphy.gif", style=
