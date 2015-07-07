@@ -60,7 +60,7 @@ shinyServer(
                         vol <- round(new.power.prop.test(p1 = input$cvr, 
                                                    p2 = (input$cvr * (1 + (input$mde/100))), 
                                                    power = input$beta/100, 
-                                                   alternative = "two.sided", 
+                                                   alternative = input$tails, 
                                                    sig.level = ((100-input$alpha)/100)),0
                         )
                         vol
@@ -70,7 +70,7 @@ shinyServer(
                         vol <- round(new.power.prop.test(p1 = input$cvr, 
                                                          p2 = (input$cvr * (1 + (input$mde/100))), 
                                                          power = input$beta/100, 
-                                                         alternative = "two.sided", 
+                                                         alternative = input$tails, 
                                                          sig.level = ((100-input$alpha)/100)),0
                                )
                         vol * 2
