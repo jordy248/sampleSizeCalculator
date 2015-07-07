@@ -24,7 +24,10 @@ shinyUI(fluidPage(
                         ),
                         sliderInput("beta", label = h3("Select the desired statistical power:"),
                                     min = 50, max = 100, value = 80
-                        )
+                        ),
+                        radioButtons("tails", label = h3("Tails"),
+                                     choices = list("One-sided" = "one.sided", "Two-sided" = "two.sided"), 
+                                     selected = "two.sided")
                 ),
                 
                 mainPanel(
