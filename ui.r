@@ -5,9 +5,8 @@ shinyUI(fluidPage(
         
         sidebarLayout(
                 sidebarPanel(
-                        helpText("Use the proper sample size for your A/B test
-                                 and you just might find yourself as fierce
-                                 as this cow:"
+                        helpText("Use the calculator below to determine the  proper 
+                                sample size for your A/B test"
                         ),
                         img(src="http://media.giphy.com/media/h55EUEsTG9224/giphy.gif", style=
                                     "width:75%; height:75%; align:center;"
@@ -27,7 +26,7 @@ shinyUI(fluidPage(
                         ),
                         radioButtons("tails", label = h3("Tails"),
                                      choices = list("One-sided" = "one.sided", "Two-sided" = "two.sided"), 
-                                     selected = "two.sided")
+                                     selected = "one.sided")
                 ),
                 
                 mainPanel(
