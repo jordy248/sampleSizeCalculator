@@ -18,7 +18,7 @@ shinyUI(fluidPage(
                         sliderInput("mde", label = h3("Select the desired minimum detectable effect:"),
                                 min = 0, max = 100, value = 10
                         ),
-                        sliderInput("alpha", label = h3("Select the desired confidence interval:"),
+                        sliderInput("alpha", label = h3("Select the desired confidence level:"),
                                     min = 50, max = 100, value = 95
                         ),
                         sliderInput("beta", label = h3("Select the desired statistical power:"),
