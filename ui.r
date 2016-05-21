@@ -1,7 +1,12 @@
 # ui.R
 
-shinyUI(fluidPage(
-        titlePanel("Jordy's A/B Test Sample Size COW-culator"),
+shinyUI(fluidPage(theme = "bootstrap.css",
+
+        #tags$head(
+        #        tags$link(rel = "stylesheet", type = "text/css", href = "bootstrap.css")
+        #),
+        
+        h1("Jordy's A/B Test Sample Size COW-culator"),
         
         sidebarLayout(
                 sidebarPanel(

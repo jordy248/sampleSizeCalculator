@@ -11,6 +11,73 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
+/* begin jordy additions */
+
+.container-fluid > h2
+{
+    color: white !important !important;
+}
+
+.well
+{
+    background: linear-gradient(45deg, #0040c1, #BA0BDA);
+    background-size: 100% 100%;
+
+    -webkit-animation: gradShift 8s ease infinite;
+    -moz-animation: gradShift 8s ease infinite;
+    animation: gradShift 8s ease infinite;
+
+    @-webkit-keyframes gradShift 
+    {
+        0%{background-position:0% 96%}
+        50%{background-position:100% 5%}
+        100%{background-position:0% 96%}
+    }
+    @-moz-keyframes gradShift 
+    {
+        0%{background-position:0% 96%}
+        50%{background-position:100% 5%}
+        100%{background-position:0% 96%}
+    }
+    @keyframes gradShift 
+    { 
+        0%{background-position:0% 96%}
+        50%{background-position:100% 5%}
+        100%{background-position:0% 96%}
+    }
+}
+
+.help-block, .irs-min, .irs-max, .irs-grid-text, .shiny-input-container span
+{
+    color: white !important;
+}
+
+.well h1,
+.well h2,
+.well h3,
+.well h4,
+.well h5,
+.well h6,
+.well .h1,
+.well .h2,
+.well .h3,
+.well .h4,
+.well .h5,
+.well .h6 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #ffffff !important;
+  text-align: center;
+}
+
+
+
+/* end jordy additions */
+
+
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -1190,7 +1257,8 @@ h6,
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
   line-height: 1.2;
-  color: #317eac;
+  color: #555555;
+  text-align: center;
 }
 h1 small,
 h2 small,
